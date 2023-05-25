@@ -1,0 +1,170 @@
+@charset "UTF-8";
+/* 全体 */
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	background-color: #f0eee8;
+}
+
+th, td {
+	padding: 8px;
+}
+
+.main {
+	padding: 70px 0;
+	background-color: white;
+}
+
+.admin_title {
+	text-align: center
+}
+
+.btn {
+	min-width: 80px;
+}
+
+.ml15 {
+	margin-left: 15px;
+}
+
+/* 背景色 */
+.background-orange {
+	background-color: #ffad5b;
+}
+
+.background-lightorange {
+	background-color: #ffeddb;
+}
+
+.border {
+	border-bottom: 1px solid #d3d3d3;
+}
+
+/*=== 管理者側 ===*/
+/* 一覧 */
+.list_form_table {
+	width: 70%;
+}
+
+.list_form_table td {
+	width: 500px;
+	text-align: center;
+}
+
+.list_display_table td, .list_display_table th {
+	height: 2.5em;
+	min-height: 2.5em;
+	max-width: 800px;
+	text-align: left;
+}
+
+.list_display_table th>span, .list_display_table td>span {
+	margin: 4px;
+}
+
+.list_status {
+	padding: 4px 8px;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+
+.list_display_table
+.status_done_reply {
+	background-color: #d0ffe9;
+	color: #333;
+}
+
+.status_not_reply {
+	background-color: #ff7979;
+	color: #333;
+}
+
+.list_kind {
+	padding: 3px 6px;
+	border-radius: 4px;
+	box-sizing: border-box;
+}
+.kind_1{
+	background-color: #feeecf;
+	color: #333;
+}
+.kind_2{
+	background-color: #eaffd0;
+	color: #333;
+}
+.kind_3{
+	background-color: #c8f0ff;
+	color: #333;
+}
+.kind_4{
+	background-color: #ecd9ff;
+	color: #333;
+}
+.kind_5{
+	background-color: #ffdbf3;
+	color: #333;
+}
+
+/* 詳細 */
+.detail {
+	margin: 0 auto;
+	width: 100%;
+	height: auto;
+	word-break: break-all;
+	text-align: center;
+}
+
+.detail>table {
+	margin: 0 auto;
+	background-color: white;
+	padding: 8px;
+}
+
+.detail td {
+	border: none;
+	max-width: 500px;
+}
+
+.detail tr>td:first-of-type {
+	text-align: left;
+}
+
+.detail>form {
+	display: inline;
+	margin: 20px;
+}
+
+/* 返信 */
+.reply {
+
+}
+
+.reply>div {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.reply>div>div, .reply>div>form {
+	margin: 0 20px;
+}
+
+.reply_form {
+	text-align: center;
+}
+
+/* 確認 */
+.confirm_admin {
+	text-align: center;
+}
+
+.buttons{
+	margin-top: 20px;
+}
+
+.left {
+	text-align: left;
+}
