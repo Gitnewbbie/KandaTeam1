@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>問い合わせシステム</title>
+		<link rel="stylesheet" href="../../css/common.css">
+		<link rel="stylesheet" href="../../css/admin.css">
+	</head>
+<body>
+		<div class="header">
+				<p class="logo">神田英会話スクール</p>
+				<div>
+						<span><a class="link" href="list.html">一覧</a></span> <span><a class="link" href="login.html">ログアウト</a></span>
+				</div>
+		</div>
+
+		<div class="reply main">
+
+			<h2 class="admin_title">お問い合わせ返信</h2>
+
+				<div class="inquiry-content">
+					<table border=0>
+				<tr>
+					<th class="background-lightorange">名前</th>
+					<td  style="max-width: 500px;" class="left">田中太郎</td>
+				</tr>
+				<tr>
+					<th class="background-lightorange">項目</th>
+					<td  style="max-width: 500px;" class="">①料金・お支払いについて</td>
+				</tr>
+				<tr>
+					<th class="background-lightorange">お問い合わせ内容</th>
+					<td style="max-width: 500px;" class="">全くの初心者でも受講可能ですか？全くの初戦者でも受講可能でしょうか全くの初心者でも受講可能ですか？全くの初戦者でも受講可能でしょうか
+					</td>
+				</tr>
+			</table>
+				</div>
+
+				<form class="reply_form" action="<%= request.getContextPath() %>/reply" method="post">
+					<table border=0 align="center" summary="メニュー表示" style="margin-top: 40px;">
+						<tr style="text-align: left;"><td style="padding-bottom: 0;">件名</td></tr>
+						<tr><td><input type="text" name="subject" size="100" value="【神田英会話スクール】お問い合わせについて" required></td></tr>
+						<tr style="text-align: left;"><td style="padding-bottom: 0;">返信内容</td></tr>
+						<tr><td><textarea name="text" rows="10" cols="103" required></textarea></td></tr>
+					</table>
+
+					<br>
+
+					<input type="hidden" name="inquiry_id" value="<%= inquiryId %>">
+					<!-- <p class="reply_form"><input type="submit" value="確認"></p> -->
+					<button class="btn" onclick="location.href='confirmAdmin.html'">確認</button>
+				</form>
+		</div>
+
+		<div class="footer">
+				<p>copyright (c) 2023 Kanda English School all rights reserved.</p>
+		</div>
+</body>
+</html>

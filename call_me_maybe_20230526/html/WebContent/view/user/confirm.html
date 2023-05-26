@@ -1,0 +1,84 @@
+
+<html>
+	<head>
+		<title>お問い合わせフォーム</title>
+		<link rel="stylesheet" href="../../css/common.css">
+		<link rel="stylesheet" href="../../css/user.css">
+	</head>
+	<body>
+		<div class="header">
+			<p class="logo">神田英会話スクール</p>
+			<div>
+				<span><a class="link" href="home.html"><b>ホーム</b></a></span>
+				<span><a class="link" href="inquery.html"><b>お問い合わせ</b></a></span>
+			</div>
+		</div>
+
+		<div class="bg_white main">
+
+		<div align="center">
+			<h1>お問い合わせ 内容確認</h1>
+			<p>入力事項が正しければ、<b>送信</b>ボタンを押してください。</p>
+		</div>
+		<div class="bg_orange inquiry_form">
+			<table class="center" style="font-size: 15pt;">
+				<tr>
+					<td class="confirm_left_cell">名前<span class="required">必須</span></td>
+					<td class="confirm_center_cell"></td>
+					<th class="confirm_right_cell">田中太郎</th>
+				</tr>
+				<tr>
+					<td class="confirm_left_cell">性別</td>
+					<td class="confirm_center_cell"></td>
+					<th class="confirm_right_cell">男性</th>
+				</tr>
+				<tr>
+					<td class="confirm_left_cell">年齢</td>
+					<td class="confirm_center_cell"></td>
+					<th class="confirm_right_cell">25才</th>
+				</tr>
+				<tr>
+					<td class="confirm_left_cell">住所</td>
+					<td class="confirm_center_cell"></td>
+					<th class="confirm_right_cell">東京都千代田区神田紺屋町11　岩田ビル３Ｆ</th>
+				</tr>
+				<tr>
+					<td class="confirm_left_cell">メールアドレス<span class="required">必須</span></td>
+					<td class="confirm_center_cell"></td>
+					<th class="confirm_right_cell">abcde@domain.co.jp</th>
+				</tr>
+				<tr>
+					<td class="confirm_left_cell">お問い合わせ項目<span class="required">必須</span></td>
+					<td class="confirm_center_cell"></td>
+					<th class="confirm_right_cell">受講について</th>
+				</tr>
+				<tr>
+					<td class="confirm_left_cell">お問い合わせ内容<span class="required">必須</span></td>
+					<td class="confirm_center_cell"></td>
+					<th class="confirm_right_cell">全くの初心者でも受講可能ですか？</th>
+				</tr>
+			</table>
+		</div>
+
+		<form id="send" action="<%=request.getContextPath()%>/checkUser" method="get">
+			<input type="hidden" name="user_name" value="<%=userName%>">
+			<input type="hidden" name="kana" value="<%=kana%>">
+			<input type="hidden" name="address_num" value="<%=aderessNum%>">
+			<input type="hidden" name="address" value="<%=address%>">
+			<input type="hidden" name="phone" value="<%=phone%>">
+			<input type="hidden" name="user_email" value="<%=userEmail%>">
+			<input type="hidden" name="item" value="<%=item%>">
+			<input type="hidden" name="content" value="<%=content%>">
+		</form>
+
+		<div class="buttons">
+			<button class="two_button" type="button" name="cmd" onClick="location.href='inquery.html'">変更</button>
+			<button class="two_button" type="submit" name="cmd" onClick="location.href='complete.html'">送信</button>
+		</div>
+	</div>
+
+		<div class="footer">
+			<p>copyright (c) 2023 Kanda English School all rights reserved.</p>
+		</div>
+	</body>
+</html>
