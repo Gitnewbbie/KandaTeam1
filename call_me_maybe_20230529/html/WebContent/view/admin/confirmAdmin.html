@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>問い合わせシステム</title>
+		<link rel="stylesheet" href="../../css/common.css">
+		<link rel="stylesheet" href="../../css/admin.css">
+	</head>
+<body>
+		<div class="header">
+				<p class="logo">神田英会話スクール</p>
+				<div>
+						<span><a class="link" href="list.html">一覧</a></span> <span><a class="link" href="login.html">ログアウト</a></span>
+				</div>
+		</div>
+
+		<div class="confirm_admin main">
+
+		<h2 class="admin_title">お問い合わせ確認</h2>
+
+		<form id="send" action="<%=request.getContextPath()%>/checkAdmin" method="post">
+			<table style="margin: 0 auto; ">
+				<tr>
+					<th width="80" class="background-lightorange">名前</th>
+					<td style="text-align: left;max-width: 500px;" >田中太郎</td>
+					<td><input type="hidden" name="name" value="<% out.println(name); %>"></td>
+				</tr>
+
+				<tr>
+					<th class="background-lightorange">件名</th>
+					<td style="text-align: left;max-width: 500px;">【神田英会話スクール】お問い合わせについて</td>
+					<td><input type="hidden" name="subject" value="<% out.println(subject); %>"></td>
+				</tr>
+				<tr>
+					<th class="background-lightorange">内容</th>
+					<td style="text-align: left;max-width: 500px;">お問い合わせいただきありがとうございます。<br>当スクールは初心者の方でも…<br>…<br>よろしくお願いします。</td>
+					<td><input type="hidden" name="text"value="<% out.println(text); %>"></td>
+				</tr>
+			</table>
+			<input type="hidden" name="inquiry_id" value="<%= inquiry.getInquiryId() %>">
+		</form>
+
+		<form id="return" action="<%= request.getContextPath() %>/view/admin/reply.jsp"></form>
+
+		<div class="buttons">
+			<!-- <button type="submit" form="send">返信</button>
+			<button type="submit" form="return">戻る</button> -->
+			<button class="btn" onclick="location.href='reply.html'">戻る</button>
+			<button class="btn ml15" onclick="location.href='completeAdmin.html'">返信</button>
+		</div>
+
+	</div>
+
+		<div class="footer">
+				<p>copyright (c) 2023 Kanda English School all rights reserved.</p>
+		</div>
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+		<title>問い合わせシステム</title>
+		<link rel="stylesheet" href="../../css/common.css">
+		<link rel="stylesheet" href="../../css/admin.css">
+	</head>
+<body>
+		<div class="header">
+				<p class="logo">神田英会話スクール</p>
+				<div>
+						<span><a class="link" href="list.html">一覧</a></span> <span><a class="link" href="login.html">ログアウト</a></span>
+				</div>
+		</div>
+
+		<div class="detail main">
+
+			<h2 class="admin_title">お問い合わせ詳細</h2>
+
+			<table border=0 style="margin-bottom: 20px;">
+				<tr>
+					<th class="background-lightorange">名前</th>
+					<td class="left">田中太郎</td>
+				</tr>
+
+				<tr>
+					<th class="background-lightorange">ふりがな</th>
+					<td class=""left"">たなかたろう</td>
+				</tr>
+
+				<tr>
+					<th class="background-lightorange">郵便番号</th>
+					<td class="">000-0000
+					</td>
+				</tr>
+
+				<tr>
+					<th class="background-lightorange">住所</th>
+					<td class="">東京都千代田区神田紺屋町11
+				</td>
+				</tr>
+
+				<tr>
+					<th class="background-lightorange">電話番号</th>
+					<td class="">000-000-0000
+					</td>
+				</tr>
+
+				<tr>
+					<th class="background-lightorange">メールアドレス</th>
+					<td class="">abcde@domain.co.jp</td>
+				</tr>
+
+				<tr>
+					<th class="background-lightorange">返信状態</th>
+					<td class="">返信済み
+					</td>
+				</tr>
+
+				<tr>
+					<th class="background-lightorange">お問い合わせ日時</th>
+					<td class="">2023/05/03 12:55</td>
+				</tr>
+				<tr>
+					<th class="background-lightorange">対応日時</th>
+					<td class="">2023/05/09 18:55</td>
+				</tr>
+
+				<tr>
+					<th class="background-lightorange">項目</th>
+					<td class="">①料金・お支払いについて</td>
+				</tr>
+
+				<tr>
+					<th class="background-lightorange">お問い合わせ内容</th>
+					<td class="">全くの初心者でも受講可能ですか？
+					</td>
+				</tr>
+			</table>
+
+				<!-- <input type="submit" value="戻る"> -->
+				<button class="btn" onclick="location.href='list.html'">戻る</button>
+				<input type="hidden" name="inquiry_id" value="<%= inquiry.getInquiryId() %>">
+				<!-- <input type="submit" value="返信"> -->
+				<button class="btn ml15" onclick="location.href='reply.html'">返信</button>
+		</div>
+
+		<div class="footer">
+				<p>copyright (c) 2023 Kanda English School all rights reserved.</p>
+		</div>
+</body>
+</html>

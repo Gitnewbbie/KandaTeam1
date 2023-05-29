@@ -1,0 +1,80 @@
+
+<html>
+	<head>
+		<title>お問い合わせフォーム</title>
+		<link rel="stylesheet" href="../../css/common.css">
+		<link rel="stylesheet" href="../../css/user.css">
+	</head>
+	<body>
+		<div class="header">
+			<p class="logo">神田英会話スクール</p>
+			<div>
+				<span><a class="link" href="home.html"><b>ホーム</b></a></span>
+				<span><a class="link" href="inquery.html"><b>お問い合わせ</b></a></span>
+			</div>
+		</div>
+
+		<div>
+			<form class="bg_white" action="" method="get">
+				<div align="center">
+					<h1>お問い合わせ 内容入力</h1>
+					<p>
+						以下のフォームに必須事項をご入力のうえ、確認ボタンを押してください。<span class="required">必須</span>は必須項目です。
+					</p>
+				</div>
+				<div class="bg_orange inquiry_form">
+					<table class="center">
+						<tr>
+							<th><label class="label_form">名前<span class="required">必須</span></label></th>
+							<td><input class= "midle"type="text" name="user_name" required></td>
+						</tr>
+						<tr>
+							<th><label class="label_form">性別</label></th>
+								<td>
+									<input class="radio" type="radio" name="gender"  value= "man"required>男性
+									<input class="radio"type="radio" name="gender"  value= "woman"required>女性
+								</td>
+						</tr>
+						<tr>
+							<th><label class="label_form">年齢</label></th>
+							<td><input class= "mini"  type="text" name="age" required></td>
+						</tr>
+						<tr>
+							<th><label class="label_form"  style="width: 200px">住所</label></th>
+							<td><input type="text" name="address"></td>
+						</tr>
+						<tr>
+							<th><label class="label_form">メールアドレス<span class="required">必須</span></label></th>
+							<td><input type="text" name="user_email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="正しいメールアドレスの形式で入力してください。" required></td>
+						</tr>
+						<tr>
+							<th><label class="label_form">お問い合わせ項目<span class="required">必須</span></label></th>
+							<td>
+								<div>
+									<select name="item" required>
+										<option value="0">----------------------------------------</option>
+										<option value="1">①料金・お支払いについて</option>
+										<option value="2">②講座、コース、教材について</option>
+										<option value="3">③学習の進め方について</option>
+										<option value="4">④受講期限について</option>
+										<option value="5">⑤受講終了後のサポートについて</option>
+										<option value="6">⑥その他</option>
+									</select>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<th><label class="label_form">お問い合わせ内容<span class="required">必須</span></label></th>
+							<td><textarea name="content" rows="5" cols="40" required></textarea></td>
+						</tr>
+					</table>
+				</div>
+				<button type="submit" onclick="location.href='confirm.html'">確認</button>
+			</form>
+		</div>
+
+		<div class="footer" >
+			<p>copyright (c) 2023 Kanda English School all rights reserved.</p>
+		</div>
+	</body>
+</html>
